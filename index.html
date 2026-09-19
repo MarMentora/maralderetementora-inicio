@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mar Alderete — Elegí tu camino</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
+<meta name="theme-color" content="#F6F0E6">
+<meta name="description" content="Comunidad Ahora Sí y Mentoría M.A.R. — dos formas de acompañarte con Mar Alderete.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,ital@9..144,300..700,0..1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F6F0E6;
+  --cream-light:#EAE0CB;
+  --brown-dark:#3B2A1C;
+  --brown-soft:#6E5C46;
+  --gold:#9C7E5E;
+  --verde:#1E7A4A;
+  --verde-claro:#3FAE6E;
+  --white:#FFFFFF;
+  --serif:'Fraunces',serif;
+  --sans:'Jost',sans-serif;
+  --radius:20px;
+  --shadow:0 20px 50px rgba(59,42,28,.10);
+}
+html{color-scheme:only light;background:var(--cream);}
+*{box-sizing:border-box;}
+body{margin:0;font-family:var(--sans);background:var(--cream);color:var(--brown-dark);-webkit-font-smoothing:antialiased;}
+img,video{max-width:100%;display:block;}
+.wrap{
+  min-height:100dvh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:64px 24px calc(48px + env(safe-area-inset-bottom,0px));
+  text-align:center;
+}
+.eyebrow{font-family:var(--sans);font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 14px;}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5.5vw,46px);line-height:1.15;margin:0 0 16px;text-wrap:balance;}
+h1 em{font-style:italic;color:var(--verde);}
+.sub{font-size:16px;color:var(--brown-soft);max-width:480px;margin:0 auto 48px;line-height:1.6;}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:820px;}
+@media (max-width:680px){.cards{grid-template-columns:1fr;}}
+.card{
+  background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:38px 30px;display:flex;flex-direction:column;align-items:center;text-align:center;
+  border-top:4px solid var(--accent, var(--gold));
+  transition:transform .25s ease;
+}
+.card:hover{transform:translateY(-4px);}
+.card .tag{font-family:var(--sans);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent, var(--gold));margin:0 0 10px;font-weight:600;}
+.card h2{font-family:var(--serif);font-size:26px;font-weight:500;margin:0 0 14px;}
+.card p{font-size:14.5px;color:var(--brown-soft);line-height:1.6;margin:0 0 26px;}
+.card .btn{
+  display:inline-block;font-family:var(--sans);font-weight:600;letter-spacing:.04em;font-size:14px;
+  padding:14px 28px;border-radius:999px;text-decoration:none;color:var(--white);
+  background:var(--accent, var(--gold));box-shadow:0 10px 22px rgba(0,0,0,.12);
+  transition:opacity .2s ease;
+}
+.card .btn:hover{opacity:.88;}
+.card.mentoria{--accent:var(--verde);}
+footer{margin-top:56px;font-size:12.5px;color:var(--brown-soft);text-align:center;line-height:1.8;}
+footer a{color:var(--brown-soft);}
+@media (prefers-color-scheme: dark){
+  :root{
+    --cream:#F6F0E6 !important;--cream-light:#EAE0CB !important;--brown-dark:#3B2A1C !important;
+    --brown-soft:#6E5C46 !important;--gold:#9C7E5E !important;--verde:#1E7A4A !important;--white:#FFFFFF !important;
+  }
+  html,body{background:var(--cream) !important;color:var(--brown-dark) !important;}
+  .card{background:var(--white) !important;color:var(--brown-dark) !important;}
+}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Mar Alderete</p>
+    <h1>¿Por dónde querés<br><em>empezar</em>?</h1>
+    <p class="sub">Dos formas de acompañarte a soltar lo que te frena y volver a conectar con quien realmente sos.</p>
+    <div class="cards">
+      <a href="https://comunidad.maralderetementora.com" class="card" style="text-decoration:none;color:inherit;">
+        <p class="tag">Comunidad</p>
+        <h2>Ahora Sí</h2>
+        <p>Un espacio de contención y crecimiento en comunidad, con encuentros en vivo y acompañamiento continuo.</p>
+        <span class="btn">Conocer la comunidad</span>
+      </a>
+      <a href="https://mentoria.maralderetementora.com" class="card mentoria" style="text-decoration:none;color:inherit;">
+        <p class="tag">Mentoría "M.A.R."</p>
+        <h2>Acción rápida</h2>
+        <p>90 días de acompañamiento personalizado 1 a 1 para materializar tu transformación.</p>
+        <span class="btn">Conocer la mentoría</span>
+      </a>
+    </div>
+    <footer>
+      Mar@maralderetementora.com · @Maralderetementora<br>
+      Copyright © 2026. Derechos reservados.
+    </footer>
+  </div>
+</body>
+</html>
